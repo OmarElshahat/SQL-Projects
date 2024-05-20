@@ -1,0 +1,5 @@
+SELECT stay,COUNT(inter_dom) count_int , ROUND(AVG(todep),2) average_phq ,ROUND(AVG(tosc),2) average_scs, ROUND(AVG(toas),2) average_as
+FROM 'students.csv'
+WHERE stay IS NOT NULL AND inter_dom = 'Inter'
+GROUP BY 1 
+ORDER BY 1 DESC;
